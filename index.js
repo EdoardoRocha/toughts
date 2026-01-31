@@ -33,7 +33,7 @@ app.use(express.json())
 // Session middleware
 app.use(session({
     name: "session",
-    secret: "nosso_secret",
+    secret: process.env.AUTH_TOKEN,
     resave: false,
     saveUninitialized: false,
     store: new FileStore({
